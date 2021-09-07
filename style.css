@@ -44,9 +44,15 @@
     width: 100px;
     height: 100px;
     background: red;
+    transform:scale(1);
+    transition: transform 3s;
 }
 
 
+.ex-4-square:hover{
+    transform: scale(0);
+
+}
 
 
 
@@ -55,21 +61,131 @@
     width: 60px;
     height: 60px;
     background: red;
+    transform:scale(1);
+    transition: transform 2s;
+
 }
+
+.ex-5-square:hover{
+    transform:scale(1.2);
+}
+
+.ex-5-square:active{
+        transform:scale(.6);
+
+}
+
+
+
+
+
+
 .ex-6-img, .ex-7-img, .ex-8-img {
     width: 500px;
 }
 
+
+
+.ex-6-img:hover{
+    filter: grayscale();
+}
+
+
+
+.ex-7-img{
+    transition: filter 250ms;
+}
+
+
+
+
+.ex-7-img:hover{
+    filter: grayscale() blur(2px);
+
+}
+
+
+
+.ex-8-img{
+    transition: all 250ms;
+
+
+}
+
+.ex-8-img:hover{
+    filter: brightness(1.1) blur(2px);
+    border-radius: 5%;
+}
+
+
+
+
+
+
+
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+    transform: scale(1);
+    transition: all 250ms;
+
 }
+
+.ex-9-img:hover{
+    transform: scale(.9);
+    filter: brightness(1.1) blur(2px);
+    border-radius: 5%;
+
+
+}
+
+
+
+
+
 .ex-10-icon {
     font-size: 60px;
+    animation: spin 2s linear infinite;
 }
-.ex-11-icon {
+
+
+
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+
+
+.ex-11-icon{
     font-size: 60px;
+
 }
+
+.ex-11-icon:hover {
+    animation: spin_2 2s linear;
+
+}
+
+@keyframes spin_2{ 
+    0%{ transform:rotate(0deg);}
+    75%{ transform: rotate(270deg);}
+    100%{ transform: rotate(0deg);}
+
+}
+
+
+
+
+
+
+
+
+
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -91,6 +207,33 @@
     width: 60px;
     height: 20px;
 }
+
+.ex-12-button:hover .ex-12-top-white{
+    animation: move_top 2s linear infinite alternate;
+}
+
+@keyframes move_top {
+    0%{left:10%;}
+    100%{left: calc(100% - 60px);}
+    
+}
+
+
+.ex-12-button:hover .ex-12-bottom-white{
+    animation: move_bottom 2s linear infinite alternate;
+
+}
+@keyframes move_bottom {
+    0%{right: 20%;}
+    100%{right: calc(100% - 60px);}
+    
+}
+
+
+
+
+
+
 .ex-12-bottom-white, .ex-13-bottom-white {
     position: absolute;
     bottom: -10px;
